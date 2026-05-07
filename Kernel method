@@ -1,0 +1,14 @@
+import nump as np
+import matplotlib.pyplot as plt
+
+#1 Generate Synthetic data
+# Inputs: (Initial temp, Time, Percentile) -> Output: Radius
+np.random.seed(42)
+n_samples = 200
+
+# Features: T_init(0-100), Time(0-10), Percentile(0-1)
+X = np.column_stack([np.random.uniform(20,100,n_samples), np.random.uniform(0, 50, n_samples), np.random.uniform(0,1,n_samples)])
+
+# Target: a dummy physics-inspired function
+def true_radius_func(X):
+  temp, time, p = 
